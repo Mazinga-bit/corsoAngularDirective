@@ -1,0 +1,27 @@
+<div class="modal-backdrop fade show" style="z-index: 1040;" ng-if="showModal"></div>
+<div id="exampleModalLive"
+     class="modal fade show"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="exampleModalLiveLabel"
+     style="display: block; padding-right: 17px;"
+     ng-if="showModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLiveLabel"><strong><div ng-transclude="title"></div></strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">×</button>
+            </div>
+            <div class="modal-body">
+                <div ng-transclude="body"></div>
+            </div>
+            <div class="modal-footer">
+
+                <div ng-transclude="footer"></div>
+                <button type="button" class="btn btn-primary" ng-click="clickSave()">Save Directive</button>
+                <button type="button" class="btn btn-secondary"
+                        ng-click="close()" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

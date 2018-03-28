@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it" ng-app="myTestApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script type="application/javascript" src="node_modules/angular/angular.min.js"></script>
+
+    <script src="assets/app.js" type="application/javascript"></script>
+
+    <script src="assets/controller/controllerMain.js" type="application/javascript"></script>
+
+    <script src="assets/directive/dialogDirective.js" type="application/javascript"></script>
+</head>
+<body ng-controller="controllerMain as vm">
+
+<a class="btn btn-success" style="margin:15px;"
+   ng-click="vm.showModal = true" href="">mostra</a>
+
+
+<dialog-directive
+        on-close="vm.onDialogClose()"
+        show-modal="vm.showModal">
+
+    <dialog-title>Ciao Titolo</dialog-title>
+
+    <dialog-body>Ciao Body</dialog-body>
+
+    <dialog-footer>
+        <button type="button" class="btn btn-primary" ng-click="vm.clickSave()">Save Controller</button>
+    </dialog-footer>
+
+</dialog-directive>
+
+</body>
+</html>
