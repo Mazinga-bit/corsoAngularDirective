@@ -1,16 +1,16 @@
 'use strict';
-angular.module( myApp )
-    .controller('controllerMain', controllerMain);
+//angular.module( myApp )
+app.controller('controllerMain', controllerMain);
 
-    function controllerMain(){
+function controllerMain() {
 
-        var vm = this;
+    var vm = this;
 
-        vm.onDialogClose = function(){
-            return confirm( 'Vuoi chiudere?' );
-        };
+    vm.onDialogClose = function () {
+        return confirm('Vuoi chiudere?');
+    };
 
-        vm.clickSave = function(){
-            console.log('Ho salvato dal controller padre');
-        };
-    }
+    vm.clickSave = function () {
+        console.log('Ho salvato dal controller padre');
+    };
+}
