@@ -18,7 +18,6 @@
   "homepage": "https://github.com/Mazinga-bit/corsoAngularDirective#readme",
   "dependencies": {
     "angular": "^1.6.9",
-    "boostrap": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0"
   }
