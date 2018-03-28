@@ -17,7 +17,7 @@ app.directive('dialogDirective', function () {
         link: function (scope, element, attr) {
 
             scope.clickSave = function () {
-                console.log('Salvato da direttiva');
+                console.log('Ho salvato dalla direttiva');
             };
 
             scope.close = function () {
