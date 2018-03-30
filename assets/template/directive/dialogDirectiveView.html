@@ -10,7 +10,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLiveLabel"><strong><div ng-transclude="title"></div></strong></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">×</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-if="showClose.show" ng-click="close()">×</button>
             </div>
             <div class="modal-body">
                 <div ng-transclude="body"></div>
@@ -18,9 +18,9 @@
             <div class="modal-footer">
 
                 <div ng-transclude="footer"></div>
-                <button type="button" class="btn btn-primary" ng-click="clickSave()" ng-if="showSave">{{saveLabel}}</button>
+                <button type="button" class="btn btn-primary" ng-click="clickSave()" ng-if="showSave.show">{{saveLabel}}</button>
                 <button type="button" class="btn btn-secondary"
-                        ng-click="close()" data-dismiss="modal" ng-if="showClose">{{closeLabel}}</button>
+                        ng-click="close()" data-dismiss="modal" ng-if="showClose.show">{{closeLabel}}</button>
             </div>
         </div>
     </div>
