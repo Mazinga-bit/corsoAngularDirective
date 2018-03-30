@@ -6,6 +6,9 @@ function controllerMain() {
 
     var vm = this;
 
+    vm.showClose = true;
+    vm.showSave = true;
+
     vm.onDialogClose = function () {
         return confirm('Vuoi chiudere?');
     };

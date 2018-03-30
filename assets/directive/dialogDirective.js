@@ -6,7 +6,9 @@ app.directive('dialogDirective', function () {
         scope: {
             title: '=',
             onClose: '&',
-            showModal: '='
+            showModal: '=',
+            showClose: '=',
+            showSave: '='
         },
         transclude: {
             'title': '?dialogTitle',
