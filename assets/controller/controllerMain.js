@@ -6,8 +6,15 @@ function controllerMain() {
 
     var vm = this;
 
-    vm.showClose = true;
-    vm.showSave = true;
+    vm.showClose = {
+        show: true,
+        label: null
+    };
+    vm.showSave = {
+        show: true,
+        label: 'Directive Save'
+
+    };
 
     vm.onDialogClose = function () {
         return confirm('Vuoi chiudere?');

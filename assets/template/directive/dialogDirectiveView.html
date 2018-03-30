@@ -18,9 +18,9 @@
             <div class="modal-footer">
 
                 <div ng-transclude="footer"></div>
-                <button type="button" class="btn btn-primary" ng-click="clickSave()" ng-if="showSave">Save Directive</button>
+                <button type="button" class="btn btn-primary" ng-click="clickSave()" ng-if="showSave">{{saveLabel}}</button>
                 <button type="button" class="btn btn-secondary"
-                        ng-click="close()" data-dismiss="modal" ng-if="showClose">Close</button>
+                        ng-click="close()" data-dismiss="modal" ng-if="showClose">{{closeLabel}}</button>
             </div>
         </div>
     </div>

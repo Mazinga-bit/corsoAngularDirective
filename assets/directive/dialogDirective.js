@@ -18,6 +18,17 @@ app.directive('dialogDirective', function () {
 
         link: function (scope, element, attr) {
 
+            if(scope.showSave.label != null ){
+                scope.saveLabel =  scope.showSave.label;
+            }else{
+                scope.saveLabel = 'save';
+            }
+
+            if(scope.showClose.label != null ){
+                scope.closeLabel =  scope.showClose.label;
+            }else{
+                scope.closeLabel = 'Close';
+            }
             scope.clickSave = function () {
                 console.log('Ho salvato dalla direttiva');
             };
