@@ -13,28 +13,41 @@
     <script src="assets/controller/controllerMain.js" type="application/javascript"></script>
 
     <script src="assets/directive/dialogDirective.js" type="application/javascript"></script>
+    <script src="assets/directive/tabsDirective.js" type="application/javascript"></script>
 </head>
 <body ng-controller="controllerMain as vm">
 
 <a class="btn btn-success" style="margin:15px;"
    ng-click="vm.showModal = true" href="">mostra</a>
 
+<div class="wrapper">
+    <div class="container">
+        <dialog-directive
+                on-close="vm.onDialogClose()"
+                show-modal="vm.showModal"
+                show-close="vm.showClose"
+                show-save="vm.showSave">
 
-<dialog-directive
-        on-close="vm.onDialogClose()"
-        show-modal="vm.showModal"
-        show-close="vm.showClose"
-        show-save="vm.showSave">
+            <dialog-title>Ciao Titolo</dialog-title>
 
-    <dialog-title>Ciao Titolo</dialog-title>
+            <dialog-body>Ciao Body</dialog-body>
 
-    <dialog-body>Ciao Body</dialog-body>
+            <dialog-footer>
+                <button type="button" class="btn btn-primary" ng-click="vm.clickSave()">Controller Save</button>
+            </dialog-footer>
 
-    <dialog-footer>
-        <button type="button" class="btn btn-primary" ng-click="vm.clickSave()">Controller Save</button>
-    </dialog-footer>
+        </dialog-directive>
 
-</dialog-directive>
-
+        <tabs-directive>
+            <tab-content title="Hello">
+                <p>Lorem ipsum dolor sit amet</p>
+            </tab-content>
+            <tab-content title="World">
+                <em>Mauris elementum elementum enim at suscipit.</em>
+                <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+            </tab-content>
+        </tabs-directive>
+    </div>
+</div>
 </body>
 </html>

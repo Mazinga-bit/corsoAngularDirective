@@ -13,7 +13,6 @@ function controllerMain() {
     vm.showSave = {
         show: true,
         label: 'Directive Save'
-
     };
 
     vm.onDialogClose = function () {
