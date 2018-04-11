@@ -1,3 +1,3 @@
 'use strict';
-var myApp = 'myTestApp'
+var myApp = 'CorsoAngular';
 var app = angular.module(myApp, []);
