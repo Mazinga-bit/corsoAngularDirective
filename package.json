@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/Mazinga-bit/corsoAngularDirective#readme",
   "dependencies": {
-    "angular": "^1.6.9",
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.5.0"
+    "angular": "^1.6.9"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-connect": "^5.5.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   }
