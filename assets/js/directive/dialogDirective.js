@@ -16,17 +16,17 @@ app.directive('dialogDirective', function () {
             'footer': 'dialogFooter'
         },
 
-        link: function (scope, element, attr) {
+        link: function (scope, element, attr, controllers) {
 
-            if(scope.showSave.label != null ){
-                scope.saveLabel =  scope.showSave.label;
-            }else{
+            if (scope.showSave.label != null) {
+                scope.saveLabel = scope.showSave.label;
+            } else {
                 scope.saveLabel = 'save';
             }
 
-            if(scope.showClose.label != null ){
-                scope.closeLabel =  scope.showClose.label;
-            }else{
+            if (scope.showClose.label != null) {
+                scope.closeLabel = scope.showClose.label;
+            } else {
                 scope.closeLabel = 'Close';
             }
             scope.clickSave = function () {

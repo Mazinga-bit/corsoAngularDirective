@@ -2,7 +2,7 @@
 //angular.module( myApp )
 app.controller('controllerMain', controllerMain);
 
-function controllerMain() {
+function controllerMain(deferredRequest) {
 
     var vm = this;
 
@@ -22,4 +22,8 @@ function controllerMain() {
     vm.clickSave = function () {
         console.log('Ho salvato dal controller padre');
     };
+
+    deferredRequest.getName().then(function(name){
+       vm.name = name;
+    });
 }

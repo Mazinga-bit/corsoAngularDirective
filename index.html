@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body ng-controller="controllerMain as vm">
-
-<a class="btn btn-success" style="margin:15px;"
-   ng-click="vm.showModal = true" href="">mostra</a>
-
 <div class="wrapper">
+
     <div class="container">
+        Ciao {{vm.name}}
+        <a class="btn btn-success" style="margin:15px;"
+           ng-click="vm.showModal = true" href="">mostra</a>
         <dialog-directive
                 on-close="vm.onDialogClose()"
                 show-modal="vm.showModal"
@@ -45,6 +45,8 @@
 <script type="application/javascript" src="node_modules/angular/angular.min.js"></script>
 
 <script src="assets/js/app.js" type="application/javascript"></script>
+
+<script src="assets/js/service/appService.js" type="application/javascript"></script>
 
 <script src="assets/js/controller/controllerMain.js" type="application/javascript"></script>
 
