@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        app: './dev/js/app.js',
+        app: './dev/js/script.js',
         vendors: './bower_components/jquery/dist/jquery.js'
     },
     output: {
