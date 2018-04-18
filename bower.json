@@ -14,9 +14,11 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "glyphicons": "^0.0.2",
     "components-font-awesome": "^4.7.0",
     "bootstrap": "^4.0.0",
-    "foundation": "^5.5.3"
+    "foundation": "^5.5.3",
   }
 }

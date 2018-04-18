@@ -2,7 +2,9 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    uncss = require('postcss-uncss');
+
 
 gulp.task('connect', function() {
     connect.server({
@@ -24,10 +26,27 @@ gulp.task('html', function () {
 });
 
 gulp.task('sass', function () {
+    var plugins = [
+        uncss({
+            html: ['../index.html', 'posts/**/*.html', 'http://example.com']
+        }),
+    ];
     gulp.src('./dev/scss/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(minify-css())
+        //.pipe(postcss(plugins))
+        //.pipe(minify-css())
         .pipe(gulp.dest('./assets/css'));
+});
+
+gulp.task('uncss', function () {
+    var plugins = [
+        uncss({
+            html: ['index.html', 'posts/**/*.html', 'http://example.com']
+        }),
+    ];
+    return gulp.src('./src/*.css')
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('./dest'));
 });
 
 gulp.task('watch', function () {

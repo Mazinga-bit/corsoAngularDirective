@@ -2,18 +2,8 @@
 <html lang="it" ng-app="myTestApp">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
-
+    <title>Corso AngularJs Direttive</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-    <script type="application/javascript" src="node_modules/angular/angular.min.js"></script>
-
-    <script src="assets/app.js" type="application/javascript"></script>
-
-    <script src="assets/controller/controllerMain.js" type="application/javascript"></script>
-
-    <script src="assets/directive/dialogDirective.js" type="application/javascript"></script>
-    <script src="assets/directive/tabsDirective.js" type="application/javascript"></script>
 </head>
 <body ng-controller="controllerMain as vm">
 
@@ -39,15 +29,26 @@
         </dialog-directive>
 
         <tabs-directive>
+
             <tab-content title="Hello">
                 <p>Lorem ipsum dolor sit amet</p>
             </tab-content>
+
             <tab-content title="World">
                 <em>Mauris elementum elementum enim at suscipit.</em>
                 <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
             </tab-content>
+
         </tabs-directive>
     </div>
 </div>
+<script type="application/javascript" src="node_modules/angular/angular.min.js"></script>
+
+<script src="assets/app.js" type="application/javascript"></script>
+
+<script src="assets/controller/controllerMain.js" type="application/javascript"></script>
+
+<script src="assets/directive/dialogDirective.js" type="application/javascript"></script>
+<script src="assets/directive/tabsDirective.js" type="application/javascript"></script>
 </body>
 </html>
